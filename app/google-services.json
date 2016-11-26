@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "989637139517",
+    "firebase_url": "https://smartbusses-1d92b.firebaseio.com",
+    "project_id": "smartbusses-1d92b",
+    "storage_bucket": "smartbusses-1d92b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989637139517:android:b26167521965cc11",
+        "android_client_info": {
+          "package_name": "com.hackathon.rsinha.smartbusses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989637139517-qno8e52hq7vm41m8mq7u8ipph1c8549a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackathon.rsinha.smartbusses",
+            "certificate_hash": "7BB2189DB4AB15A1848A8FE336EE0264E0B8382C"
+          }
+        },
+        {
+          "client_id": "989637139517-v0o2po1d4k8hescusj31enm3lv15qjut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOdnqQ5dcGe7Qldh85NMx6QSyKWbYIbBQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989637139517-v0o2po1d4k8hescusj31enm3lv15qjut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
