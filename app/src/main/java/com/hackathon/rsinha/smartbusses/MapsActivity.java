@@ -15,6 +15,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PointOfInterest;
+import com.google.firebase.database.DatabaseException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONObject;
 
@@ -30,7 +33,7 @@ import java.util.List;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnPoiClickListener {
 
     private GoogleMap mMap;
-
+    private DatabaseReference mdatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         getLocalBusStation(12.933657,77.6123021);
+        initFireBasedata();
+    }
+
+    private void initFireBasedata() {
+        mdatabase= FirebaseDatabase.getInstance().getReference("bus_Location");
+        mdatabase.setValue("Message");
     }
 
     public void getLocalBusStation(double mLatitude,double mLongitude) {
@@ -205,6 +214,7 @@ private String downloadUrl(String strUrl) throws IOException {
             } catch (Exception e) {
                 Log.d("Check", e.toString());
             }
+            Log.i("Check",data);
             return data;
         }
 // Executed after the complete execution of doInBackground() method
